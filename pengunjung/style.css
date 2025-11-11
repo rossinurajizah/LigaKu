@@ -1,0 +1,222 @@
+/* ====== Sidebar ====== */
+.sidebar {
+  width: 250px;
+  background: #007bff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  display: block;
+  font-weight: bold;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #ffffff; /* Hover background in white */
+  color: #000000; /* Black text on hover */
+}
+/* Apply a blue-to-white gradient background */
+.gradient-blue-white {
+  background: linear-gradient(to right, #007bff, #ffffff); /* Blue to white gradient */
+}
+
+/* ====== Konten ====== */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
+
+/* ====== MAIN CONTENT ====== */
+.main-content {
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  color: #000000; /* Black for header */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section {
+  background-color: #ffffff; /* White background for content sections */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(12, 77, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: #000000; /* Black for section headings */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ====== Hasil Pertandingan (Tabel) ====== */
+#hasil {
+  padding: 20px;
+  background-color: #ffffff; /* White background for the results */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#hasil h2 {
+  font-size: 1.8rem;
+  color: #000000; /* Blue for results heading */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#hasil table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#hasil table th,
+#hasil table td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+#hasil table th {
+  background-color: #007bff; /* Blue background for table headers */
+  color: #ffffff; /* White text for table headers */
+  font-weight: bold;
+}
+
+#hasil table td {
+  background-color: #f9f9f9; /* Light grey background for table cells */
+}
+
+#hasil table tr:nth-child(even) td {
+  background-color: #f1f1f1; /* Slightly darker grey for even rows */
+}
+
+#hasil table td a {
+  color: #000000; /* Black text for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#hasil table td a:hover {
+  text-decoration: underline;
+}
+
+#hasil table .result {
+  color: #28a745; /* Green for results */
+  font-weight: bold;
+}
+
+#hasil table .result.draw {
+  color: #ffc107; /* Yellow for draws */
+}
+
+#hasil table .result.lost {
+  color: #dc3545; /* Red for losses */
+}
+
+
+/* ====== Lineup Section ====== */
+#lineup h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #000000; /* Black for lineup heading */
+  margin-bottom: 20px;
+}
+
+#lineup table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#lineup table th,
+#lineup table td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#lineup table th {
+  background-color: #000000; /* Black background for table headers */
+  color: #ffffff; /* White text for table headers */
+  font-weight: bold;
+}
+
+#lineup table td {
+  background-color: #f9f9f9; /* Light grey for table cells */
+}
+
+#lineup table th[colspan="3"] {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* ====== Profile Menu ====== */
+#profileMenu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #ffffff; /* White background for profile menu */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+#profileMenu a {
+  display: block;
+  padding: 8px 12px;
+  color: #000000; /* Black text for profile menu links */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#profileMenu a:hover {
+  background-color: #f0f0f0; /* Light grey on hover */
+}
+
+.profile-icon {
+  cursor: pointer;
+}
+
+/* ====== General Adjustments ====== */
+hr {
+  margin: 20px 0;
+  border: 1px solid #ddd; /* Light grey color for horizontal rule */
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #hasil table {
+    font-size: 0.9rem;
+  }
+
+  #hasil table th,
+  #hasil table td {
+    padding: 8px;
+  }
+}

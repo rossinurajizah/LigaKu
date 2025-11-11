@@ -1,0 +1,121 @@
+/* Layout Utama */
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f8ff; /* Soft light blue */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #007bff;
+  padding: 12px;
+  color: #fff;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+.sidebar h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.sidebar a {
+  color: #ffffff;
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 0.5 rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 6px;
+}
+
+/* Content */
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  margin-left: 250px;
+  margin-top: 20px;
+  background-color: #f8fbff;
+}
+
+/* Dashboard Hero */
+.dashboard-hero {
+  background: linear-gradient(to right, #007bff, #ffffff); /* Blue gradient */
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  padding: 50px 20px;
+  box-shadow: 0 2px 5px rgba(12, 77, 255, 0.1);
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+}
+
+.dashboard-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.dashboard-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.dashboard-hero .btn:hover {
+  background-color: #ffffff;
+  color: #1976d2;
+  transform: translateY(-2px);
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .content {
+    margin-left: 200px;
+  }
+
+  .dashboard-hero h2 {
+    font-size: 2rem;
+  }
+
+  .dashboard-hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
