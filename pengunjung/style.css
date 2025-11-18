@@ -1,0 +1,340 @@
+/* ====== RESET & BASE ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* ====== HAMBURGER MENU (Mobile Only) ====== */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  width: 250px;
+  background: #007bff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .nav-link {
+  color: #ffffff;
+  padding: 10px 20px;
+  display: block;
+  font-weight: bold;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.profile-icon {
+  cursor: pointer;
+}
+
+#profileMenu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+#profileMenu a {
+  display: block;
+  padding: 8px 12px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#profileMenu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* ====== MAIN CONTENT ====== */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+/* ====== HERO BANNER (Gradient Blue to White) ====== */
+.gradient-blue-white {
+  background: linear-gradient(to right, #007bff, #ffffff);
+  color: #000000;
+  padding: 60px 40px;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(12, 77, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+section h4 {
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+section p {
+  color: #333;
+  line-height: 1.6;
+}
+
+header h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ====== TABLE STYLING - KONSISTEN TANPA WARNA ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+table th,
+table td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+table td {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+table td a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+/* ====== CARD STYLING ====== */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ====== UTILITIES ====== */
+.text-muted {
+  color: #6c757d;
+}
+
+.text-center {
+  text-align: center;
+}
+
+hr {
+  margin: 20px 0;
+  border: 1px solid #ddd;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  /* Show hamburger menu */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide sidebar by default on mobile */
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  /* Show sidebar when active */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Adjust content margin */
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 80px 15px 15px 15px;
+  }
+
+  /* Hero banner adjustments */
+  .gradient-blue-white {
+    padding: 40px 20px;
+  }
+
+  /* Section adjustments */
+  section {
+    padding: 20px 15px;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  section h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Table adjustments */
+  table {
+    font-size: 0.75rem;
+  }
+
+  table th,
+  table td {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
+
+  /* Card adjustments */
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  /* Profile menu adjustments */
+  #profileMenu {
+    right: 10px;
+    left: auto;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .content {
+    padding: 70px 10px 10px 10px;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+
+  table {
+    font-size: 0.7rem;
+  }
+
+  table th,
+  table td {
+    padding: 6px 3px;
+    font-size: 0.7rem;
+  }
+}
